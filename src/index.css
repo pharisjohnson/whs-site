@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+:root {
+  /* Material Design 3 System Variables */
+  --md-sys-color-primary: #2C6E49;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #c7e0ca;
+  --md-sys-color-on-primary-container: #052010;
+  
+  --md-sys-color-secondary: #A98158;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #ffe0c2;
+  --md-sys-color-on-secondary-container: #2c1a06;
+  
+  --md-sys-color-tertiary: #3A7288;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #c0e8ff;
+  --md-sys-color-on-tertiary-container: #001f2c;
+  
+  --md-sys-color-surface: #FCF9F3;
+  --md-sys-color-surface-dim: #ddd9cf;
+  --md-sys-color-surface-bright: #FCF9F3;
+  --md-sys-color-surface-container-lowest: #ffffff;
+  --md-sys-color-surface-container-low: #f5f0e7;
+  --md-sys-color-surface-container: #efe9df;
+  --md-sys-color-surface-container-high: #e9e3d8;
+  --md-sys-color-surface-container-highest: #e3ddd2;
+  
+  --md-sys-color-on-surface: #1d1b16;
+  --md-sys-color-on-surface-variant: #4b4539;
+  --md-sys-color-outline: #7d7564;
+  --md-sys-color-outline-variant: #cec5b4;
+}
+
+@theme {
+  --font-display: "EB Garamond", serif;
+  --font-body: "Manrope", sans-serif;
+  
+  --color-primary: var(--md-sys-color-primary);
+  --color-on-primary: var(--md-sys-color-on-primary);
+  --color-primary-container: var(--md-sys-color-primary-container);
+  --color-on-primary-container: var(--md-sys-color-on-primary-container);
+  
+  --color-secondary: var(--md-sys-color-secondary);
+  --color-on-secondary: var(--md-sys-color-on-secondary);
+  --color-secondary-container: var(--md-sys-color-secondary-container);
+  --color-on-secondary-container: var(--md-sys-color-on-secondary-container);
+  
+  --color-tertiary: var(--md-sys-color-tertiary);
+  --color-on-tertiary: var(--md-sys-color-on-tertiary);
+  --color-tertiary-container: var(--md-sys-color-tertiary-container);
+  --color-on-tertiary-container: var(--md-sys-color-on-tertiary-container);
+  
+  --color-surface: var(--md-sys-color-surface);
+  --color-surface-dim: var(--md-sys-color-surface-dim);
+  --color-surface-bright: var(--md-sys-color-surface-bright);
+  --color-surface-container-lowest: var(--md-sys-color-surface-container-lowest);
+  --color-surface-container-low: var(--md-sys-color-surface-container-low);
+  --color-surface-container: var(--md-sys-color-surface-container);
+  --color-surface-container-high: var(--md-sys-color-surface-container-high);
+  --color-surface-container-highest: var(--md-sys-color-surface-container-highest);
+  
+  --color-on-surface: var(--md-sys-color-on-surface);
+  --color-on-surface-variant: var(--md-sys-color-on-surface-variant);
+  --color-outline: var(--md-sys-color-outline);
+  --color-outline-variant: var(--md-sys-color-outline-variant);
+
+  --radius-xl: 0.75rem;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+  }
+  
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+/* Material Symbols Icon Utility */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom subtle scrollbar matching MD3 surfaces */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--md-sys-color-surface-container-low);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--md-sys-color-outline-variant);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--md-sys-color-secondary);
+}

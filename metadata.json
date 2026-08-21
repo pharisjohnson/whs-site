@@ -1,0 +1,6 @@
+{
+  "name": "World Housing Spain",
+  "description": "Luxury Real Estate on the Costa Blanca with bespoke property portfolio search, prime area guides, new developments, and advisory services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
